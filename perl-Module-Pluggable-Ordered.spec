@@ -32,15 +32,27 @@ name of a method, and some parameters. Let's say we call it like so:
 
     __PACKAGE__->call_plugins("my_method", @something);
 
-call_plugins looks at the plugin modules found using Module::Pluggable 
+call_plugins looks at the plugin modules found using Module::Pluggable
 for ones which provide my_method_order. It sorts the modules
 numerically based on the result of this method, and then calls
 $my_method(@something) on them in order. This produces an effect a
-little like the System V init process, where files can specify where in
-the init sequence they want to be called.
+little like the System V init process, where files can specify where
+in the init sequence they want to be called.
 
-# %description -l pl
-# TODO
+%description -l pl
+Ten modu³ zachowuje siê dok³adnie tak samo jak Module::Pluggable,
+obs³uguj±c wszystkie jego opcje, ale dodatkowo w³±cza do klasy metodê
+call_plugins. call_plugins zachowuje siê jak Class::Trigger; przyjmuje
+nazwê metody i parametry. W przypadku wywo³ania powiedzmy:
+
+    __PACKAGE__->call_plugins("my_method", @something);
+
+call_plugins przeszukuje modu³y wtyczek znalezione przy u¿yciu
+Module::Pluggable pod k±tem tych, które dostarczaj± my_method_order.
+Sortuje modu³y liczbowo w oparciu o wynik tej metody i wywo³uje po
+kolei na nich $my_method(@something). Daje to efekt podobny trochê do
+procesu inicjalizacji Systemu V, gdzie pliki mog± okre¶liæ sekwencjê
+startow±, w jakiej maj± byæ wywo³ywane.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
