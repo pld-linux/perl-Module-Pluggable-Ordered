@@ -5,8 +5,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Module
 %define	pnam	Pluggable-Ordered
-Summary:	Module::Pluggable::Ordered - Call module plugins in a specified order
-#Summary(pl):	
+Summary:	Module::Pluggable::Ordered - call module plugins in a specified order
+Summary(pl):	Module::Pluggable::Ordered - wywo³ywanie modu³ów-wtyczek w zadanej kolejno¶ci
 Name:		perl-Module-Pluggable-Ordered
 Version:	1.4
 Release:	1
@@ -25,19 +25,19 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This module behaves exactly the same as C<Module::Pluggable>, supporting
-all of its options, but also mixes in the C<call_plugins> method to your
-class. C<call_plugins> acts a little like C<Class::Trigger>; it takes the
+This module behaves exactly the same as Module::Pluggable, supporting
+all of its options, but also mixes in the call_plugins method to your
+class. call_plugins acts a little like Class::Trigger; it takes the
 name of a method, and some parameters. Let's say we call it like so:
 
     __PACKAGE__->call_plugins("my_method", @something);
 
-C<call_plugins> looks at the plugin modules found using C<Module::Pluggable> 
-for ones which provide C<my_method_order>. It sorts the modules
+call_plugins looks at the plugin modules found using Module::Pluggable 
+for ones which provide my_method_order. It sorts the modules
 numerically based on the result of this method, and then calls
-C<$_-E<gt>my_method(@something)> on them in order. This produces an
-effect a little like the System V init process, where files can specify
-where in the init sequence they want to be called.
+$my_method(@something) on them in order. This produces an effect a
+little like the System V init process, where files can specify where in
+the init sequence they want to be called.
 
 # %description -l pl
 # TODO
