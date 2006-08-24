@@ -9,7 +9,7 @@ Summary:	Module::Pluggable::Ordered - call module plugins in a specified order
 Summary(pl):	Module::Pluggable::Ordered - wywo³ywanie modu³ów-wtyczek w zadanej kolejno¶ci
 Name:		perl-Module-Pluggable-Ordered
 Version:	1.4
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -21,6 +21,7 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-Module-Pluggable >= 1.9
 BuildRequires:	perl-UNIVERSAL-require
 %endif
+Requires:	perl-dirs >= 1.0-5
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,7 +31,7 @@ all of its options, but also mixes in the call_plugins method to your
 class. call_plugins acts a little like Class::Trigger; it takes the
 name of a method, and some parameters. Let's say we call it like so:
 
-    __PACKAGE__->call_plugins("my_method", @something);
+__PACKAGE__->call_plugins("my_method", @something);
 
 call_plugins looks at the plugin modules found using Module::Pluggable
 for ones which provide my_method_order. It sorts the modules
@@ -45,7 +46,7 @@ obs³uguj±c wszystkie jego opcje, ale dodatkowo w³±cza do klasy metodê
 call_plugins. call_plugins zachowuje siê jak Class::Trigger; przyjmuje
 nazwê metody i parametry. W przypadku wywo³ania powiedzmy:
 
-    __PACKAGE__->call_plugins("my_method", @something);
+__PACKAGE__->call_plugins("my_method", @something);
 
 call_plugins przeszukuje modu³y wtyczek znalezione przy u¿yciu
 Module::Pluggable pod k±tem tych, które dostarczaj± my_method_order.
