@@ -6,7 +6,7 @@
 %define	pdir	Module
 %define	pnam	Pluggable-Ordered
 Summary:	Module::Pluggable::Ordered - call module plugins in a specified order
-Summary(pl):	Module::Pluggable::Ordered - wywo³ywanie modu³ów-wtyczek w zadanej kolejno¶ci
+Summary(pl.UTF-8):   Module::Pluggable::Ordered - wywoÅ‚ywanie moduÅ‚Ã³w-wtyczek w zadanej kolejnoÅ›ci
 Name:		perl-Module-Pluggable-Ordered
 Version:	1.4
 Release:	3
@@ -40,20 +40,20 @@ $my_method(@something) on them in order. This produces an effect a
 little like the System V init process, where files can specify where
 in the init sequence they want to be called.
 
-%description -l pl
-Ten modu³ zachowuje siê dok³adnie tak samo jak Module::Pluggable,
-obs³uguj±c wszystkie jego opcje, ale dodatkowo w³±cza do klasy metodê
-call_plugins. call_plugins zachowuje siê jak Class::Trigger; przyjmuje
-nazwê metody i parametry. W przypadku wywo³ania powiedzmy:
+%description -l pl.UTF-8
+Ten moduÅ‚ zachowuje siÄ™ dokÅ‚adnie tak samo jak Module::Pluggable,
+obsÅ‚ugujÄ…c wszystkie jego opcje, ale dodatkowo wÅ‚Ä…cza do klasy metodÄ™
+call_plugins. call_plugins zachowuje siÄ™ jak Class::Trigger; przyjmuje
+nazwÄ™ metody i parametry. W przypadku wywoÅ‚ania powiedzmy:
 
 __PACKAGE__->call_plugins("my_method", @something);
 
-call_plugins przeszukuje modu³y wtyczek znalezione przy u¿yciu
-Module::Pluggable pod k±tem tych, które dostarczaj± my_method_order.
-Sortuje modu³y liczbowo w oparciu o wynik tej metody i wywo³uje po
-kolei na nich $my_method(@something). Daje to efekt podobny trochê do
-procesu inicjalizacji Systemu V, gdzie pliki mog± okre¶liæ sekwencjê
-startow±, w jakiej maj± byæ wywo³ywane.
+call_plugins przeszukuje moduÅ‚y wtyczek znalezione przy uÅ¼yciu
+Module::Pluggable pod kÄ…tem tych, ktÃ³re dostarczajÄ… my_method_order.
+Sortuje moduÅ‚y liczbowo w oparciu o wynik tej metody i wywoÅ‚uje po
+kolei na nich $my_method(@something). Daje to efekt podobny trochÄ™ do
+procesu inicjalizacji Systemu V, gdzie pliki mogÄ… okreÅ›liÄ‡ sekwencjÄ™
+startowÄ…, w jakiej majÄ… byÄ‡ wywoÅ‚ywane.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
