@@ -6,7 +6,7 @@
 %define	pdir	Module
 %define	pnam	Pluggable-Ordered
 Summary:	Module::Pluggable::Ordered - call module plugins in a specified order
-Summary(pl.UTF-8):   Module::Pluggable::Ordered - wywoływanie modułów-wtyczek w zadanej kolejności
+Summary(pl.UTF-8):	Module::Pluggable::Ordered - wywoływanie modułów-wtyczek w zadanej kolejności
 Name:		perl-Module-Pluggable-Ordered
 Version:	1.4
 Release:	3
