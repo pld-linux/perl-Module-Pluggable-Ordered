@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	Module
 %define	pnam	Pluggable-Ordered
 Summary:	Module::Pluggable::Ordered - call module plugins in a specified order
