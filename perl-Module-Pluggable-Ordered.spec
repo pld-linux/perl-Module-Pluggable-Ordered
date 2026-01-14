@@ -8,7 +8,7 @@ Summary:	Module::Pluggable::Ordered - call module plugins in a specified order
 Summary(pl.UTF-8):	Module::Pluggable::Ordered - wywoływanie modułów-wtyczek w zadanej kolejności
 Name:		perl-Module-Pluggable-Ordered
 Version:	1.5
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
